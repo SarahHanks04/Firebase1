@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", "poppins", sans-serif;
+  background-color: #f7f8fb;
+}
+
+:root {
+  /* Light Mode */
+  --background: #faf4f4;
+  --text: #13162d;
+  --accent: #fdbf17;
+  --muted: #9d9d9d;
+  --border: #eaeaea;
+
+  /* Dark Mode */
+  --background-dark: #13162D;
+  --text-dark: #faf4f4;
+  --accent-dark: #fdbf17;
+  --muted-dark: #707070;
+  --border-dark: #29292a;
+}
+
+.light {
+  --background: var(--background-light);
+  --text: var(--text-light);
+  --accent: var(--accent-light);
+  --muted: var(--muted-light);
+  --border: var(--border-light);
+}
+
+.dark {
+  --background: var(--background-dark);
+  --text: var(--text-dark);
+  --accent: var(--accent-dark);
+  --muted: var(--muted-dark);
+  --border: var(--border-dark);
+}
