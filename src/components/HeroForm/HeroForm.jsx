@@ -306,7 +306,7 @@ const HeroForm = () => {
   const submitHeroForm = useMutation({
     mutationFn: async (data) => {
       const submissionData = {
-        id: Math.random().toString(36).substr(2, 5), // Generate a random ID
+        id: Math.random().toString(36).substr(2, 5),
         formId: "feedback",
         formType: "feedback",
         submissionDate: new Date().toISOString(),
