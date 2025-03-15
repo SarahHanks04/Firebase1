@@ -131,6 +131,16 @@
           "options": [],
           "maxRating": 5,
           "ratingValue": 0
+        },
+        {
+          "id": "10",
+          "label": "How are you doing firebase?",
+          "type": "text",
+          "placeholder": "Enter your answer",
+          "required": false,
+          "options": [],
+          "maxRating": 5,
+          "ratingValue": 0
         }
       ]
     },
