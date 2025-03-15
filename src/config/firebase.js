@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-// import { getAnalytics } from "firebase/analytics";
+
 const firebaseConfig = {
   apiKey: "AIzaSyDp-VicJgATE2PIEDg9CfeeLTCiwwwDbas",
   authDomain: "echohub-form.firebaseapp.com",
@@ -11,7 +11,5 @@ const firebaseConfig = {
   measurementId: "G-7T7064WPM3"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
-// const analytics = getAnalytics(app);
