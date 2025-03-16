@@ -131,7 +131,7 @@ const ComplaintUserView = () => {
 
   const fetchFormDetails = async () => {
     try {
-      const complaintRef = doc(db, "formEvents", "complaint"); // Fetch the 'complaint' document
+      const complaintRef = doc(db, "formEvents", "complaint"); 
       const complaintSnap = await getDoc(complaintRef);
       
       if (complaintSnap.exists()) {
