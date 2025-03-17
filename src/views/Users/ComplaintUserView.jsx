@@ -150,7 +150,7 @@ const ComplaintUserView = () => {
     
     try {
       await addDoc(collection(db, "responses"), {
-        formId: "complaint", // Use 'complaint' since we're fetching it explicitly
+        formId: "complaint", 
         responses: responseData,
         timestamp: new Date(),
       });
