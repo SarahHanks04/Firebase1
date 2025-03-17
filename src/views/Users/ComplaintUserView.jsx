@@ -131,9 +131,9 @@ const ComplaintUserView = () => {
 
   const fetchFormDetails = async () => {
     try {
-      const complaintRef = doc(db, "formEvents", "complaint"); 
+      const complaintRef = doc(db, "formEvents", "complaint");
       const complaintSnap = await getDoc(complaintRef);
-      
+
       if (complaintSnap.exists()) {
         setFormDetails(complaintSnap.data());
       } else {
@@ -146,13 +146,24 @@ const ComplaintUserView = () => {
   };
 
   const handleSubmit = async (responseData, resetForm) => {
-    if (!responseData) return;
-    
+    if (!responseData || !formDetails?.fields) return;
+
     try {
+      // Transform responseData into the desired format
+      const formattedResponses = formDetails.fields.map((field) => ({
+        id: field.id, // Use the field ID from formDetails
+        label: field.label || field.id.charAt(0).toUpperCase() + field.id.slice(1), // Use the label from formDetails or generate one
+        type: field.type || "text", // Use the type from formDetails or default to "text"
+        value: responseData[field.id] || "", // Get the value from responseData
+      }));
+
+      // Add the formatted responses to Firestore
       await addDoc(collection(db, "responses"), {
-        formId: "complaint", 
-        responses: responseData,
-        timestamp: new Date(),
+        formId: "complaint",
+        formType: "complaint",
+        responses: formattedResponses, // Use the formatted responses here
+        submissionDate: new Date().toISOString(),
+        status: "unresolved",
       });
 
       alert("Form submitted successfully!");
