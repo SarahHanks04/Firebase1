@@ -271,7 +271,7 @@ const ComplaintUserView = () => {
 
       alert("Form submitted successfully!");
       resetForm();
-      setClearFields(true); // Trigger reset of UserInformation form
+      setClearFields(true);
     } catch (error) {
       console.error("Error submitting form:", error);
     }
