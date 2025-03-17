@@ -36,6 +36,16 @@
           "options": [],
           "maxRating": 5,
           "ratingValue": 0
+        },
+        {
+          "id": "4",
+          "label": "Phone Number",
+          "type": "tel",
+          "placeholder": "Enter your answer",
+          "required": true,
+          "options": [],
+          "maxRating": 5,
+          "ratingValue": 0
         }
       ]
     },
