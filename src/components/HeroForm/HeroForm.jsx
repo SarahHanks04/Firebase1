@@ -311,7 +311,7 @@ const HeroForm = () => {
         formType: "feedback",
         submissionDate: new Date().toISOString(),
         status: "unresolved",
-        data: Object.entries(data).map(([key, value]) => ({
+        responses: Object.entries(data).map(([key, value]) => ({
           id: key,
           label: key.charAt(0).toUpperCase() + key.slice(1),
           type: key === "message" ? "textarea" : "text",

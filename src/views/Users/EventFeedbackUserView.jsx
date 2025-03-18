@@ -192,6 +192,7 @@ const EventFeedbackUserView = () => {
 
       // Add the formatted responses to Firestore
       await addDoc(collection(db, "responses"), {
+        id: Math.random().toString(36).substr(2, 5),
         formId: formId,
         formType: "event",
         responses: formattedResponses,
