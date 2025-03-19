@@ -302,7 +302,6 @@ const ComplaintUserView = () => {
         clearFields={clearFields}
         onClear={() => setClearFields(false)}
       />
-      {/* <h2 className="text-2xl font-bold">{formDetails.title}</h2> */}
       <FormRenderer formFields={formDetails.fields || []} onSubmit={handleSubmit} />
     </div>
   );
