@@ -25,7 +25,7 @@ function App() {
         {/* User Routes */}
         <Route path="form/complaint/:formId" element={<ComplaintUserView />} />
         <Route path="form/event/:formId" element={<EventFeedbackUserView />} />
-        <Route path="form/:formType/:formId" element={<GenericFormView />} />
+        {/* <Route path="form/:formType/:formId" element={<GenericFormView />} /> */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
