@@ -33,13 +33,3 @@ function App() {
 }
 
 export default App;
-
-// rules_version = '2';
-
-// service cloud.firestore {
-//   match /databases/{database}/documents {
-//     match /responses/{document} {
-//       allow read, write: if true;
-//     }
-//   }
-// }
